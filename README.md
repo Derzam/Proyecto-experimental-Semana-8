@@ -3,7 +3,7 @@
 ## Autor : Derly Zambrano
 ---
 
-## 📋 Descripción
+##  Descripción
 
 Esta versión del sistema `restaurante_app` incorpora **herencia** y **polimorfismo**: se agrega la clase `Bebida`, que extiende a `Producto`, y el servicio `Restaurante` administra ambos tipos de objetos en una **única colección**, sin necesitar lógica especial para distinguirlos.
 
@@ -11,7 +11,7 @@ El sistema permite **registrar productos, bebidas y clientes**, y **listarlos**,
 
 ---
 
-## 🗂️ Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```
 restaurante_app/
@@ -31,9 +31,9 @@ restaurante_app/
 
 ---
 
-## 🧩 Clases Implementadas
+##  Clases Implementadas
 
-### 📦 `Producto` — `modelos/producto.py`
+###  `Producto` — `modelos/producto.py`
 
 Representa los datos comunes de cualquier producto del restaurante, con `__init__` tradicional y atributos controlados por `@property`/`@setter`.
 
@@ -48,7 +48,7 @@ Representa los datos comunes de cualquier producto del restaurante, con `__init_
 
 ---
 
-### 🥤 `Bebida` — `modelos/bebida.py` (hereda de `Producto`)
+###  `Bebida` — `modelos/bebida.py` (hereda de `Producto`)
 
 `Bebida` **extiende** a `Producto` mediante herencia. Su constructor llama a `super().__init__(...)` para reutilizar la inicialización de los atributos comunes, y añade un atributo propio:
 
@@ -74,13 +74,13 @@ class Bebida(Producto):
 
 ---
 
-### 👤 `Cliente` — `modelos/cliente.py`
+###  `Cliente` — `modelos/cliente.py`
 
 Implementada con `@dataclass`. Atributos: `id_cliente`, `nombre`, `correo`.
 
 ---
 
-### 🏠 `Restaurante` — `servicios/restaurante.py`
+###  `Restaurante` — `servicios/restaurante.py`
 
 Administra **una única lista de productos**, en la que conviven objetos `Producto` y `Bebida` gracias al polimorfismo, y una lista independiente de clientes.
 
@@ -95,7 +95,7 @@ Administra **una única lista de productos**, en la que conviven objetos `Produc
 
 ---
 
-## 🧠 Principios SOLID Aplicados
+##  Principios SOLID Aplicados
 
 | Principio | Aplicación en el proyecto |
 |---|---|
@@ -107,7 +107,7 @@ Administra **una única lista de productos**, en la que conviven objetos `Produc
 
 ---
 
-## ▶️ Cómo Ejecutar el Programa
+##  Cómo Ejecutar el Programa
 
 ### Requisitos
 - Python 3.7 o superior
@@ -120,7 +120,7 @@ python main.py
 
 ---
 
-## 🖥️ Menú Interactivo
+##  Menú Interactivo
 
 ```
 ===== SISTEMA DE RESTAURANTE =====
@@ -138,7 +138,7 @@ El sistema permanece en ejecución en un bucle `while True` hasta que el usuario
 
 ---
 
-## 🔄 Flujo del Sistema
+## Flujo del Sistema
 
 ```
 usuario selecciona una opción
@@ -158,7 +158,7 @@ Durante el listado de productos, `main.py` recorre la colección única y ejecut
 
 ---
 
-## 🛡️ Manejo de Errores
+##  Manejo de Errores
 
 Todas las entradas del usuario están protegidas con `try/except`:
 
@@ -171,7 +171,7 @@ Todas las entradas del usuario están protegidas con `try/except`:
 
 ---
 
-## ✅ Conceptos de POO Aplicados
+##  Conceptos de POO Aplicados
 
 | Concepto | Aplicación |
 |---|---|
